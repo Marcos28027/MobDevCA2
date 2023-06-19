@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card routerLink="./news-details" button *ngFor="let article of data">
+  <ion-card routerLink="./news-details" button *ngFor="let article of data" (click)="openNewsDetails(article)">
     <img [src]="article.urlToImage">
     <ion-card-header>
       <ion-card-title>{{article.title}}</ion-card-title>
