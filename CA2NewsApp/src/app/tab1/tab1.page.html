@@ -7,7 +7,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card *ngFor="let article of data">
+  <ion-card routerLink="./news-details" button *ngFor="let article of data">
+    <img [src]="article.urlToImage">
     <ion-card-header>
       <ion-card-title>{{article.title}}</ion-card-title>
       <ion-card-subtitle>{{article.author}} - {{article.publishedAt}}</ion-card-subtitle>
